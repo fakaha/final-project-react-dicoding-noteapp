@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.note-app{
+    max-width: 60vw;
+    min-height: 60vh;
+    border-radius: 30px;
+    margin: 50px auto;
+    padding: 16px;
+    text-align: center;
+    background-color: #DBAE84;
+}
+
+.note-app h1{
+    color: #ffffff;
+    text-shadow: 2px 2px #030303;
+    margin-bottom: 20px;
+}
+
+.note-item{
+    display: flex;
+    justify-content: space-between;
+    text-shadow: 1px 2px #cccccc;
+}
+
+
+.editor-note{
+    display: flex;
+    gap: 12px;
+}
+
+.editor-note-buttons{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.contact-item_delete{
+    margin: 0;
+    padding: 0;
+    background-color: #FE0000;
+    color: #fff;
+    border: 0;
+    height: 16px;
+    width: 15px;
+}
+
+.note-item h3{
+    color: #172B4D;
+}
+
+h3.completed{
+    color: #FE0000;
+    text-decoration: line-through;
+    text-shadow: 2px 0 #cccccc;
+}
+
+.add-button-input{
+    width: 19px;
+    height: 19px;
+    background-color: #2492C2;
+    border: 0;
+    color: #fff;
+}
+
+@media screen and (max-width: 580px) {
+    .note-app{
+        max-width: 95vw;   
+    }
+}

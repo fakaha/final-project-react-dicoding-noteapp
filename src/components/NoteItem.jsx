@@ -12,12 +12,27 @@ const NoteItem = ({ note, id, onDelete, editNote }) => {
       <div className="editor-note">
         {isEdit ? (
           <div>
-            <input value={editNotes} onChange={(e) => setEditNotes(e.target.value)} placeholder="Edit Note" />
-            <button onClick={() => {editNote({  id, newNote: editNotes }); console.log(editNote); console.log(editNotes); console.log(id);}} >Save</button>
-            <button onClick={() => {
-              setIsEdit(false); 
-              setEditNotes(note);
-              }}>Cancel</button>
+            <input
+              value={editNotes}
+              onChange={(e) => setEditNotes(e.target.value)}
+              placeholder="Edit Note"
+            />
+            <button
+              onClick={() => {
+                editNote(id, editNotes);
+                setIsEdit(false);
+              }}
+            >
+              Save
+            </button>
+            <button
+              onClick={() => {
+                setIsEdit(false);
+                setEditNotes(note);
+              }}
+            >
+              Cancel
+            </button>
           </div>
         ) : (
           <div className="editor-note-buttons">

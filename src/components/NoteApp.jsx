@@ -27,11 +27,10 @@ class NoteApp extends React.Component {
         notes: [
           ...prevState.notes,
           {
-            id: this.state.lastId,
+            id: +new Date(),
             note,
           },
         ],
-        lastId: prevState.lastId + 1,
       };
     });
   }

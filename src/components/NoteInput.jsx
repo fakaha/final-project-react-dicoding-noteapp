@@ -6,6 +6,7 @@ class NoteInput extends React.Component{
 
         this.state = {
             note: '',
+            id: Number(this.props.id),
         }
 
         this.onNoteChangeEventHandler = this.onNoteChangeEventHandler.bind(this);
@@ -21,8 +22,7 @@ class NoteInput extends React.Component{
 
     onSubmitEventHandler(event){
         event.preventDefault();
-        this.props.addNote(this.state);
-        console.log(this.props.id);
+        this.props.addNote(this.state);    
         this.setState({note: ''}); // membuat value input kosong ketika sudah submit
     }
 

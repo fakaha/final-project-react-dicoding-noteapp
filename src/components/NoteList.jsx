@@ -4,9 +4,9 @@ import NoteItem from "./NoteItem";
 const NoteList = ({ notes, onDelete, editNote }) => {
     return(
         <div className="note-list">
-            {notes?.map((note, index) => (
+            {notes?.map((note) => (
                 <NoteItem
-                key={index}
+                key={note.id}
                 id={note.id}
                 onDelete={onDelete}
                 {...note}
